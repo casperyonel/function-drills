@@ -6,6 +6,11 @@
 
 //CODE HERE
 
+function helloWorld() {
+  console.log("Hello World!")
+}
+
+helloWorld()
 
 ////////////////// PROBLEM 2 ////////////////////
 /*
@@ -16,6 +21,11 @@
 
 //CODE HERE
 
+function printName(name) {
+  console.log(name)
+}
+
+printName("Casper")
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -30,6 +40,12 @@
 
 //CODE HERE
 
+function greeting(name) {
+  let stringName = String(name)
+  console.log(`Hello, ${stringName}`)
+}
+
+greeting("Casper")
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -41,6 +57,15 @@
 
 //CODE HERE
 
+function add(firstNum, secondNum) {
+  let first = Number(firstNum)
+  let second = Number(secondNum)
+  return first + second
+}
+
+let sum = add(5, 7)
+
+console.log(sum)
 
 ////////////////// PROBLEM 5 ////////////////////
 /*
@@ -53,6 +78,19 @@
 
 //CODE HERE
 
+function nameCheck(name) {
+  if (name === "Steven") {
+    return "What is up Steven?"
+  } else if (name === "Bryan") {
+    return "What is up Bryan?"
+  } else {
+    return `Cool name, ${name}`
+  }
+}
+
+let nameGreeting = nameCheck("Steven")
+
+console.log(nameGreeting)
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -66,6 +104,22 @@
 
 //CODE HERE
 
+function faveColorFinder(color) {
+  if (color === "Red"){
+    return `${color} is a great color`
+  } else if (color === "Green"){
+    return `${color} is a great color`
+  } else if (color === "Black") {
+    return `'${color} is a great color`
+  } else {
+    return "You need to evaluate your favorite color choice"
+  }
+}
+
+let colorRating = faveColorFinder("Orange")
+
+console.log(colorRating)
+
 
 ////////////////// PROBLEM 7 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -77,6 +131,13 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
+function printAllNames(array){
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i])
+  }
+}
+
+printAllNames(namesArr)
 
 ////////////////// PROBLEM 8 ////////////////////
 /*
@@ -88,6 +149,17 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
+function thatsOdd(number) {
+  if (number % 2 === 0) {
+    return "That's not odd"
+  } else {
+    return "That is odd indeed!"
+  }
+}
+
+let oddChecker = thatsOdd(3)
+
+console.log(oddChecker)
 
 ////////////////// PROBLEM 9 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -102,6 +174,24 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 
 //CODE HERE
 
+function bigOrSmall(arr){
+  let answers = []
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] > 100) {
+      answers.push("Big")
+    } else {
+      answers.push("Small")
+    }
+  }
+  return answers
+}
+
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+
+
+
+console.log(arrayEvaluator)
+
 
 ////////////////// PROBLEM 10 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
@@ -113,6 +203,18 @@ let loser = 'Glimmer'
 
 //CODE HERE
 
+function theEliminator(contestants, loser){
+  for (let i = 0; i < contestants.length; i++){
+    if (contestants[i] === loser) {
+      contestants.splice(i, 2)
+    }
+  }    
+  return contestants
+}
+
+let result = theEliminator(contestants, loser)
+
+console.log(result)
 
 ////////////////// PROBLEM 11 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -123,6 +225,12 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
+function newFunction(string) {
+  let upperCase = string.toUpperCase()
+  console.log(upperCase)
+}
+
+newFunction("heyyyyyy")
 
 ////////////////// PROBLEM 12 ////////////////////
 /*
@@ -134,6 +242,17 @@ let sampleString = "Hi, my name is Kylo."
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+
+
+
+
+
+
+
+
+
+
+
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
