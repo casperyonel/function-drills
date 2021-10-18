@@ -230,7 +230,7 @@ function newFunction(string) {
   console.log(upperCase)
 }
 
-newFunction("heyyyyyy")
+newFunction("hey")
 
 ////////////////// PROBLEM 12 ////////////////////
 /*
@@ -243,16 +243,17 @@ newFunction("heyyyyyy")
   return 'must provide a valid email address'
 */
 
+function emailCheck(email) {
+  let newEmail = String(email.trim())
+  if (newEmail.includes("@") === true) {
+    return "Email verified"
+  } else {
+    return "Must provide a valid email address"
+  }
+}
 
-
-
-
-
-
-
-
-
-
+let newCheck = emailCheck("yonelcasper@gmail.com")
+console.log(newCheck)
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -262,6 +263,17 @@ newFunction("heyyyyyy")
 
 //CODE HERE
 
+// function wallet(spend){
+//   if (spend > 3){
+//     return spend / 3
+//   } else {
+//     return "You cannot purchase even 1 frog :("
+//   }
+// }
+
+// let totalFrogs = wallet(2)
+
+// console.log(totalFrogs)
 
 ////////////////// PROBLEM 14 ////////////////////
 /*
@@ -270,15 +282,39 @@ newFunction("heyyyyyy")
 
 //CODE HERE
 
+function wallet(spend) {
+  let frogCost = 3
+  amountCanPurchase = Math.floor(spend / frogCost)
+  return amountCanPurchase
+}
+
+let totalFrogs2 = wallet(10)
+
+console.log(totalFrogs2)
 
 ////////////////// PROBLEM 15 ////////////////////
-let sampleArray = [0,1,2,3,4,7,5,6,8,9]
+
 /*
   Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
 
 //CODE HERE
 
+let sampleArray = [0,1,2,3,4,7,5,6,8,9]
+
+function newFunction(array){
+  for (let i = 1; i < array.length; i++){
+    let prevNum = array[i - 1]
+    if (array[i] > prevNum){
+      return true
+    } else {
+      return false
+    }
+  }
+}
+
+let arrayIsAscending = newFunction(sampleArray)
+console.log(arrayIsAscending)
 
 ////////////////// PROBLEM 16 ////////////////////
 
@@ -302,13 +338,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["duck", "rubberduck"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["duck", "rubberduck", "sailorDuck"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["duck", "realDuck"]
